@@ -6,7 +6,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 ############################################################
-from vote.models import VoteModel
+#from vote.models import VoteModel
 
 class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
@@ -31,7 +31,7 @@ class User(models.Model):
 	uid = models.CharField(max_length=500)
 	password = models.CharField(max_length=500)
 
-class Answer(VoteModel, models.Model):
+class Answer(models.Model):
 	name = models.TextField(max_length = 500)
 	uid = models.CharField(max_length = 500)
 	quesid=models.IntegerField()
