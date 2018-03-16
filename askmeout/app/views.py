@@ -23,7 +23,7 @@ def coursera(request):
     print ("here")
     if request.method == 'POST':
         search_id = request.POST.get('textfield', None)
-        searchfile = open("/home/kanksha/askmeout/app/HEY.txt", "r")
+        searchfile = open(r"C:\Users\Niti123\Desktop\askmeout_codeshastra_round_0\askmeout\app\HEY.txt", "r")
         courses = {}
         i=0
         for line in searchfile:
@@ -55,10 +55,13 @@ def new_post(request):
         return HttpResponseRedirect('/login')
 
 def searchDef(request):
+    print ("here")
     if request.method == 'POST':
+        print("inside if")
         search_id = request.POST.get('textfield', None)
         dictionary=PyDictionary()
-        dict = dictionary.meaning(search_id)
+        hello = dictionary.meaning(search_id)
+        print(hello)
         post = Post.objects.filter(word = search_id).values()
         selfdict = {}
         for newthing in post:
@@ -68,7 +71,12 @@ def searchDef(request):
             name = Post.objects.get(id=newthing['id'])
             key = name.author
             selfdict[key] = value
-    return render(request, 'define.html', {'data': dict.items(), 'selfdict': selfdict.items()})
+
+        return render(request, 'define.html', {'data': hello.items(), 'selfdict': selfdict.items()})
+    else:
+        print("inside else")
+        return render(request,'forum.html')
+
 
 
 def youtube_search(word):
@@ -123,6 +131,7 @@ def jargon(request):
     return render(request, 'jargon.html')
 
 def define(request):
+    print("HEYYYYYY")
     return render(request, 'define.html')
 
 def youtube(request):

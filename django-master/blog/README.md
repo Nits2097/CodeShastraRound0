@@ -1,3 +1,0 @@
-# DjangoBlog
-
-Basic Django Blog
