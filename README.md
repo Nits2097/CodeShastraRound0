@@ -22,5 +22,14 @@ Functionalities of the Jargon:
 2. Youtube Search - search any keyword and get a list of related videos, playlists and channels.
 3. Coursera Search - search any keyword and get a list of all relevant courses for that keyword.
 
+UI Screenshots for the same:
 
--Developed By Team Dost (Kanksha Zaveri, Romit Shah, Shrey Nahar and Niti Shah)
+![alt text](https://github.com/Nits2097/CodeShastraRound0/blob/master/ui/forum.png)
+
+![alt text](https://github.com/Nits2097/CodeShastraRound0/blob/master/ui/ques.png)
+
+![alt text](https://github.com/Nits2097/CodeShastraRound0/blob/master/ui/jargoncs.png)
+
+![alt text](https://github.com/Nits2097/CodeShastraRound0/blob/master/ui/jargonyt.png)
+
+![alt text](https://github.com/Nits2097/CodeShastraRound0/blob/master/ui/jargoncs.png)
